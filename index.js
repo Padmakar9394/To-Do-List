@@ -1,5 +1,6 @@
 const itemsList = document.querySelector('.items-list');
 const addBtn = document.querySelector('.btn');
+const inpt = document.querySelector('.todoTitle');
 let globalStore = [];
 
 const generateToDo = (todoData) => 
@@ -90,13 +91,5 @@ const editToDo = () => {
     document.querySelector('.todoTitle').value = e.target.parentNode.parentNode.childNodes[1].innerHTML;
     addBtn.innerHTML = "Edit";
     editID = targetID;
-    document.querySelector('.todoTitle').focus();
-
-    // let todo = globalStore.filter((toDo) => toDo.id === targetID);
-    
-    // localStorage.setItem('toDo', JSON.stringify({todo: globalStore}));
-
-    // if(tagname === "I") {
-    //     return itemsList.removeChild(e.target.parentNode.parentNode.parentNode);
-    // }
+    inpt.focus();
 }
